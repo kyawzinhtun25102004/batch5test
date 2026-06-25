@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function guessGame() {
+
+            let secretNumber = 50;
+            let guess = 0;
+            let count = 0;
+
+            while (guess != secretNumber) {
+
+                guess = Number(prompt("Guess a number between 1 and 50"));
+
+                count++;
+
+                if (guess > secretNumber) {
+                    alert("Too High!");
+                }
+                else if (guess < secretNumber) {
+                    alert("Too Low!");
+                }
+                else {
+                    alert("Correct!");
+                }
+            }
+
+            document.write("You guessed the correct number.<br>");
+            document.write("Total tries: " + count);
+        }
+
+        guessGame();
+    </script>
+        <br><br>
+    <script>
+        for (let i = 5; i >= 1; i--) {
+            for (let k = 1; k <= i; k++) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    </script>
+
+</body>
+
+</html>

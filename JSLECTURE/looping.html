@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+       for (let i = 0; i < 5; i++) {
+    for (let k = 0; k <= i; k++) {
+        document.write('*');
+    }
+    document.write('<br>');
+}       
+
+ //while loop
+   let number = parseInt(prompt("Enter a number"));
+
+while (number < 100) {
+    document.write(`Your number in While Loop: ${number}<br>`);
+    number += 10;
+}
+
+do {
+    document.write(`Your number in Do While Loop: ${number}<br>`);
+    number += 20;
+} while (number < 100);
+
+        </script>
+</body>
+</html>
