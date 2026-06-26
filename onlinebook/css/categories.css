@@ -1,0 +1,97 @@
+/* ==========================
+   CATEGORY PAGE SPECIFIC
+========================== */
+
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.category-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: #f75454;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.category-card i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+/* Subtle accent color match when hovering over a category card */
+.category-card:hover i {
+    color: #f75454;
+}
+
+.category-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #111;
+}
+
+.category-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Dynamic Card Tints */
+.cat-1 {
+    background: #fff0f0;
+}
+
+.cat-2 {
+    background: #fff8e8;
+}
+
+.cat-3 {
+    background: #f8f0ff;
+}
+
+.cat-4 {
+    background: #eef8ff;
+}
+
+.cat-5 {
+    background: #eefcf1;
+}
+
+.cat-6 {
+    background: #fffceb;
+}
+
+/* Responsive adjustments for category view */
+@media (max-width: 992px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+}
