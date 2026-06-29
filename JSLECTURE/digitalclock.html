@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Digital Clock</title>
+</head>
+<body>
+
+    <h1 id="clock-time">00:00:00 AM</h1>
+    <h2 id="clock-date">Date Loading...</h2>
+
+    <script>
+        
+        function updateClock() {
+            
+         
+            const now = new Date();
+
+            let hours = now.getHours();     
+            let minutes = now.getMinutes(); 
+            let seconds = now.getSeconds(); 
+
+            
+            let ampm = "AM";
+            if (hours >= 12) {
+                ampm = "PM";
+            }
+
+            if (hours > 12) {
+                hours = hours - 12; 
+            }
+            if (hours === 0) {
+                hours = 12;        
+            }
+
+           
+            if (hours < 10) {
+                hours = "0" + hours;
+            }
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+
+          
+            const timeText = hours + ":" + minutes + ":" + seconds + " " + ampm;
+
+
+          
+            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let dayName = daysOfWeek[now.getDay()];
+
+          
+            let dayOfMonth = now.getDate();
+            if (dayOfMonth < 10) {
+                dayOfMonth = "0" + dayOfMonth;
+            }
+
+            
+            const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            let monthName = months[now.getMonth()];
+
+            let year = now.getFullYear();
+
+           
+            const dateText = dayName + ", " + dayOfMonth + " " + monthName + " " + year;
+
+
+           
+            document.getElementById("clock-time").textContent = timeText;
+            document.getElementById("clock-date").textContent = dateText;
+        }
+
+        
+        updateClock();
+
+        setInterval(updateClock, 1000);
+    </script>
+
+</body>
+</html>
