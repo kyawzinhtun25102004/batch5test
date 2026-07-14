@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selector Example</title>
+
+    <!-- jQuery -->
+    <script src="jquery-4.0.0.min.js"></script>
+    <!-- Or use CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+</head>
+
+<body>
+
+    <h1>jQuery Selector</h1>
+
+    <button id="click">Click</button>
+
+    <p id="p-click">This is p element 1.</p>
+    <p id="p-select">This is p element 2.</p>
+    <p class="p-class">This is p element 3.</p>
+    <p class="p-class">This is p element 4.</p>
+    <p class="p-class">This is p element 5.</p>
+
+    <script>
+        $(document).ready(function () {
+
+            // Hide all paragraphs
+            $('#click').click(function () {
+                $('p').hide(500, function () {
+                    alert("All paragraph elements are hidden.");
+                });
+            });
+
+            // Hide paragraphs with class="p-class"
+            $('#p-click').click(function () {
+                $('.p-class').hide();
+            });
+
+            // Hide only the clicked paragraph
+            $('#p-select').click(function () {
+                $(this).hide();
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

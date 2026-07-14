@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Effects</title>
+
+    <script src="jquery-4.0.0.min.js"></script>
+</head>
+
+<body>
+
+    <p>
+        Hello! This is a jQuery effects lesson.
+        You can learn show(), hide(), toggle(), fadeIn(), and fadeOut().
+    </p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="fade_out">Fade Out</button>
+    <button id="fade_in">Fade In</button>
+    <button id="fade_toggle">FadeToggle</button>
+    <button id="fade_to">FadeTo</button>
+    <button id="fade_origin">FadeOrigin</button>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#hide').click(function () {
+                $('p').hide('slow');
+            });
+
+            $('#show').click(function () {
+                $('p').show('slow');
+            });
+
+            $('#toggle').click(function () {
+                $('p').toggle('slow');
+            });
+
+            $('#fade_out').click(function () {
+                $('p').fadeOut(3000);
+            });
+
+            $('#fade_in').click(function () {
+                $('p').fadeIn(3000);
+            });
+
+            $('#fade_toggle').click(function () {
+                $('p').fadeToggle(3000);
+            });
+
+            $('#fade_to').click(function () {
+                $('p').fadeTo(3000,0.2);
+            });
+
+            $('#fade_origin').click(function () {
+                $('p').fadeOrigin(3000,1);
+            });
+
+
+        });
+    </script>
+
+</body>
+
+</html>

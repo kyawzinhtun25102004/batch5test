@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Down Example</title>
+
+    <style>
+        #click_me{
+            max-width:250px;
+            background:black;
+            color:white;
+            text-align:center;
+            padding:10px;
+            cursor:pointer;
+        }
+
+        #panel{
+            max-width:250px;
+            background:black;
+            color:white;
+            text-align:center;
+            padding:50px 0;
+            /* display:none;   Hide first */
+        }
+    </style>
+
+    <script src="jquery-4.0.0.min.js"></script>
+</head>
+<body>
+
+    <button id="click_me">Click Me</button>
+
+    <p id="panel">Hello Slider</p>
+
+    <script>
+        $(document).ready(function () {
+
+            // $('#click_me').click(function () {
+            //     $('#panel').slideDown("slow");
+            // });
+
+            //   $('#click_me').click(function () {
+            //     $('#panel').slideUp(5000);
+            // });
+
+              $('#click_me').click(function () {
+                $('#panel').slideToggle();
+            });
+
+        });
+    </script>
+
+</body>
+</html>
