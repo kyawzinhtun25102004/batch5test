@@ -1,0 +1,16 @@
+/* Hero Carousel Image Aspect Ratio */
+.hero-img {
+    height: 380px;
+    object-fit: cover;
+}
+
+/* Category Cards Image Height */
+.category-img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Footer Link Hover effect */
+footer a:hover {
+    color: #ffffff !important;
+}

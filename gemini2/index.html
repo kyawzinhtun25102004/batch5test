@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeStyle - Simple Furniture for a Better Home</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <!-- Brand Name -->
+            <a class="navbar-brand fw-bold fs-4 text-dark" href="index.html">
+                <i class="fa-solid fa-house text-warning me-2"></i>HomeStyle
+            </a>
+            
+            <!-- Mobile Hamburger Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    
+                    <!-- Dropdown Menu for Categories -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="livingroom.html">Living Room</a></li>
+                            <li><a class="dropdown-item" href="bedroom.html">Bedroom</a></li>
+                            <li><a class="dropdown-item" href="diningroom.html">Dining Room</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Customer Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                </ul>
+                
+                <!-- Right Side Cart Icon -->
+                <div class="d-flex align-items-center text-dark mt-3 mt-lg-0">
+                    <i class="fa-solid fa-cart-shopping fs-4 me-2"></i>
+                    <span class="badge bg-danger rounded-pill fs-6" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION (WITHOUT DISCOUNT) ================= -->
+    <section class="hero-section py-5 bg-white mb-4">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                
+                <!-- Hero Text -->
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h1 class="display-5 fw-bold mb-3">Modern L-Shape Sofa</h1>
+                    <h3 class="text-dark fw-bold mb-3">$799.00</h3>
+                    <p class="lead text-muted mb-4">
+                        Modern design perfect for living room. Comfortable seating with premium quality materials.
+                    </p>
+
+                    <!-- Add to Cart & Like Button -->
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mb-3">
+                        <button class="btn btn-dark btn-lg flex-grow-1 flex-lg-grow-0 px-4" id="addToCartBtn">
+                            <i class="fa-solid fa-cart-plus me-2"></i>Add to Cart
+                        </button>
+                        
+                        <button class="btn btn-outline-danger btn-lg" id="likeBtn">
+                            <i class="fa-regular fa-heart" id="heartIcon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hero Carousel Slider -->
+                <div class="col-lg-6">
+                    <div id="productCarousel" class="carousel slide shadow-sm rounded-4 overflow-hidden" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" class="d-block w-100 hero-img" alt="Sofa View 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80" class="d-block w-100 hero-img" alt="Sofa View 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=800&q=80" class="d-block w-100 hero-img" alt="Sofa View 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SERVICE INFO CARDS ================= -->
+    <section class="container mb-5">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-3 shadow-sm text-center h-100">
+                    <i class="fa-solid fa-truck-fast fs-1 text-primary mb-2"></i>
+                    <h5 class="fw-bold">Delivery</h5>
+                    <p class="text-muted small mb-0">Fast & nationwide delivery to your doorstep.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-3 shadow-sm text-center h-100">
+                    <i class="fa-solid fa-wrench fs-1 text-success mb-2"></i>
+                    <h5 class="fw-bold">Assembly</h5>
+                    <p class="text-muted small mb-0">Professional setup and assembly service available.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4 bg-white rounded-3 shadow-sm text-center h-100">
+                    <i class="fa-solid fa-shield-halved fs-1 text-warning mb-2"></i>
+                    <h5 class="fw-bold">Warranty</h5>
+                    <p class="text-muted small mb-0">1 year full warranty cover for manufacturing defects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PRODUCTS CATEGORIES SECTION ================= -->
+    <section class="container py-4 mb-5" id="products">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Shop By Categories</h2>
+            <p class="text-muted">Choose something beautiful for your home.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Living Room -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=500&q=80" class="card-img-top category-img" alt="Living Room">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="card-title fw-bold">Living Room</h5>
+                        <p class="card-text text-muted flex-grow-1">Luxury Sofas & Tables</p>
+                        <div class="d-flex gap-2">
+                            <a href="livingroom.html" class="btn btn-warning btn-sm flex-grow-1">View Collection</a>
+                            <button class="btn btn-outline-dark btn-sm card-add-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bedroom -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=500&q=80" class="card-img-top category-img" alt="Bedroom">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="card-title fw-bold">Bedroom</h5>
+                        <p class="card-text text-muted flex-grow-1">Comfortable Beds & Closets</p>
+                        <div class="d-flex gap-2">
+                            <a href="bedroom.html" class="btn btn-warning btn-sm flex-grow-1">View Collection</a>
+                            <button class="btn btn-outline-dark btn-sm card-add-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dining Room -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=500&q=80" class="card-img-top category-img" alt="Dining Room">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="card-title fw-bold">Dining Room</h5>
+                        <p class="card-text text-muted flex-grow-1">Modern Dining Sets</p>
+                        <div class="d-flex gap-2">
+                            <a href="diningroom.html" class="btn btn-warning btn-sm flex-grow-1">View Collection</a>
+                            <button class="btn btn-outline-dark btn-sm card-add-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FAQ SECTION (CUSTOMER FREQUENTLY ASKED QUESTIONS) ================= -->
+    <section class="container mb-5 py-4">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold">Frequently Asked Questions (FAQ)</h2>
+            <p class="text-muted">အမေးများသော မေးခွန်းများနှင့် အဖြေများ</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion shadow-sm" id="faqAccordion">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                                ပစ္စည်းပို့ခ ဘယ်လောက်ကျသင့်ပါသလဲ။ (How much is delivery?)
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                ရန်ကုန်နှင့် မန္တလေးမြို့တွင်း ပို့ဆောင်ခ အခမဲ့ဖြစ်ပြီး အခြားမြို့များသို့ Express Delivery ဖြင့် ပို့ဆောင်ပေးပါသည်။
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                တပ်ဆင်ခ (Assembly Service) ပေးရပါသလား။
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                ကျွန်ုပ်တို့၏ ကျွမ်းကျင်ဝန်ထမ်းများမှ အိမ်အရောက် အခမဲ့ လာရောက်တပ်ဆင်ပေးပါသည်။
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                Warranty ဘယ်နှစ်နှစ် ပါဝင်ပါသလဲ။
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                ပရိဘောဂ အမျိုးအစားအားလုံးအတွက် ၁ နှစ် တိတိ Full Warranty အာမခံ ပါဝင်ပါသည်။
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4 col-12">
+                    <h4 class="fw-bold text-white mb-2">
+                        <i class="fa-solid fa-house text-warning me-2"></i>HomeStyle
+                    </h4>
+                    <p class="text-secondary">Simple products for a better home.</p>
+                </div>
+                <div class="col-md-4 col-12">
+                    <h5 class="fw-bold text-white mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-secondary text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="reviews.html" class="text-secondary text-decoration-none">Customer Reviews</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-secondary text-decoration-none">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-12">
+                    <h5 class="fw-bold text-white mb-3">Follow Us</h5>
+                    <div class="d-flex gap-3 fs-5">
+                        <a href="#" class="text-secondary"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-secondary"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-secondary"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-secondary small">
+                <p class="mb-0">&copy; 2026 HomeStyle. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
